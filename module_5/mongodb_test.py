@@ -5,4 +5,4 @@ db = client.pytech
 
 print("--Pytech Collection List--")
 print(db.list_collection_names())
-print("\nEnd of program, press any key to exit...")
+input("\nEnd of program, press any key to exit...")
