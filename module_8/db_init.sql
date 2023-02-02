@@ -14,11 +14,9 @@ CREATE USER 'pysports_user'@'localhost' IDENTIFIED WITH mysql_native_password BY
 -- grant all privileges to the pysports database to user pysports_user on localhost 
 GRANT ALL PRIVILEGES ON pysports.* TO'pysports_user'@'localhost';
 
-
 -- drop tables if they are present
 DROP TABLE IF EXISTS player;
 DROP TABLE IF EXISTS team;
-
 
 -- create the team table 
 CREATE TABLE team (
