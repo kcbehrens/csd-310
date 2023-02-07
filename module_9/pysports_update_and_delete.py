@@ -41,7 +41,7 @@ try:
     add_player = ("INSERT INTO player(first_name, last_name, team_id) VALUES(%s, %s, %s)")
 
     #Player details 
-    player_data = ("John", "Doe", 1)
+    player_data = ("Cuthulu", "Destroyer of Worlds", 7)
 
     #Add new player
     cursor.execute(add_player, player_data)
@@ -53,7 +53,7 @@ try:
     show_players(cursor, "DISPLAYING PLAYERS AFTER INSERT")
 
     #New record 
-    update_player = ("UPDATE player SET team_id = 1, first_name = 'Korbyn', last_name = 'Behrens' WHERE first_name = 'John'")
+    update_player = ("UPDATE player SET team_id = 1, first_name = 'Korbyn', last_name = 'Behrens' WHERE first_name = 'Cuthulu'")
 
     #Query update
     cursor.execute(update_player)
