@@ -70,41 +70,41 @@ INSERT INTO user(first_name, last_name, book_id)
     VALUES('Wade', 'Watts');
 
 -- Insert book records
-INSERT INTO book(book_name, author, details)
-    VALUES('The Lightning Thief', 'Rick Riordan', 'First in the Percy Jackson series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('1', 'The Lightning Thief', 'Rick Riordan', 'First in the Percy Jackson series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Sea of Monsters', 'Rick Riordan', 'Second in the Percy Jackson series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('2', 'The Sea of Monsters', 'Rick Riordan', 'Second in the Percy Jackson series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Titans Curse', 'Rick Riordan', 'Third in the Percy Jackson series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('3', 'The Titans Curse', 'Rick Riordan', 'Third in the Percy Jackson series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Battle of the Labyrinth', 'Rick Riordan', 'Fourth in the Percy Jackson series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('4', 'The Battle of the Labyrinth', 'Rick Riordan', 'Fourth in the Percy Jackson series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Last Olympian', 'Rick Riordan', 'Fifth in the Percy Jackson series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('5', 'The Last Olympian', 'Rick Riordan', 'Fifth in the Percy Jackson series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Lost Hero', 'Rick Riordan', 'First in the Heroes of Olympus series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('6', 'The Lost Hero', 'Rick Riordan', 'First in the Heroes of Olympus series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Son of Neptune', 'Rick Riordan', 'Second in the Heroes of Olympus series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('7', 'The Son of Neptune', 'Rick Riordan', 'Second in the Heroes of Olympus series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Mark of Athena', 'Rick Riordan', 'Third in the Heroes of Olympus series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('8', 'The Mark of Athena', 'Rick Riordan', 'Third in the Heroes of Olympus series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The House of Hades', 'Rick Riordan', 'Fourth in the Heroes of Olympus series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('9', 'The House of Hades', 'Rick Riordan', 'Fourth in the Heroes of Olympus series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('The Blood of Olympus', 'Rick Riordan', 'Fifth in the Heroes of Olympus series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('10', 'The Blood of Olympus', 'Rick Riordan', 'Fifth in the Heroes of Olympus series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('Ready Player One', 'Ernest Cline', 'First in the Ready Players One series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('11', 'Ready Player One', 'Ernest Cline', 'First in the Ready Players One series.');
 
-INSERT INTO book(book_name, author, details)
-    VALUES('Ready Player Two', 'Ernest Cline', 'Second in the Ready Players One series.');
+INSERT INTO book(book_id, book_name, author, details)
+    VALUES('12', 'Ready Player Two', 'Ernest Cline', 'Second in the Ready Players One series.');
 
 -- Insert wishlist records
 INSERT INTO wishlist(user_id, book_id)
@@ -128,3 +128,6 @@ INSERT INTO wishlist(user_id, book_id)
 -- Insert store record
 INSERT INTO store(locale)
     VALUES('1000 Galvin Rd S, Bellevue, NE 68005');
+
+INSERT INTO store(locale)
+    VALUES('3333 Oak View Dr, Omaha, NE 68144');
