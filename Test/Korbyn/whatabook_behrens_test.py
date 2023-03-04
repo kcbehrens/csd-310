@@ -1,6 +1,6 @@
 #Title: whatabook_behrens.py
 #Author: Korbyn Behrens
-#Date: Mar 03 2023
+#Date: Feb 24 2023
 #Description: Whatabook store active code.
 
 #Connects MySQL with Python and imports
@@ -62,7 +62,7 @@ def validate_user():
     try:
         user_id = int(input("\nWhat is your user id? "))
 
-        if user_id < 1 or user_id > 3:
+        if user_id < 0 or user_id > 3:
             print("\nInvalid customer number, program terminated...\n")
             sys.exit(0)
 
@@ -77,8 +77,8 @@ def show_account_menu():
 
     try:
         print("\n--Customer Menu--")
-        print("\n1. Wishlist\n2. Add Book To Wishlist\n3. Main Menu")
-        account_option = int(input("\nPlease choose a number 1-3: "))
+        print("\n1. Wishlist\n2. Add Book To Wishlist\n3. Delete Book From Wishlist\n4. Main Menu")
+        account_option = int(input("\nPlease choose a number 1-4: "))
 
         return account_option
     except ValueError:
@@ -144,7 +144,7 @@ try:
             account_option = show_account_menu()
 
             #While account option does is not 4
-            while account_option != 3:
+            while account_option != 4:
 
                 #If the use selects option 1, call the show_wishlist() method to show the current users configured wishlist items 
                 if account_option == 1:
@@ -153,25 +153,19 @@ try:
                 #If the user selects option 2, call the show_books_to_add function
                 if account_option == 2:
 
-                    try:
-                        show_books_to_add(cursor, my_user_id)
+                    #Show the books not currently configured in the users wishlist
+                    show_books_to_add(cursor, my_user_id)
 
-                        #Get the entered book_id 
-                        book_id = int(input("\nEnter the id of the book you want to add to your wishlist: "))
-                        
-                        #Add the selected book the users wishlist
-                        add_book_to_wishlist(cursor, my_user_id, book_id)
-                        
-                        #Commit the changes to the database
-                        db.commit()
-
-                        print("\nBook id: {} was added to your wishlist!".format(book_id))
+                    #Get the entered book_id 
+                    book_id = int(input("\nEnter the id of the book you want to add to your wishlist: "))
                     
-                    except ValueError:
-                        print("\nInvalid number, program terminated...\n")
-                        
-                        #Exit the program
-                        sys.exit(0)
+                    #Add the selected book the users wishlist
+                    add_book_to_wishlist(cursor, my_user_id, book_id)
+                    
+                    #Commit the changes to the database
+                    db.commit()
+
+                    print("\nBook id: {} was added to your wishlist!".format(book_id))
                 
                 '''#If the user selects option 3, call the show_wishlist function
                 if account_option == 3:
@@ -193,7 +187,7 @@ try:
 
                     print("\nBook id: {} was deleted from your wishlist.".format(book_id))
                     
-                    #Trying to find a way to delete from the wishlist if a user wanted to. Is a work in progress. Could not complete in time for grading.'''
+                    #Trying to find a way to delete from the wishlist if a user wanted to. Is a work in progress.'''
 
                 #If the selected option is less than 0 or greater than 3, display an invalid user selection 
                 if account_option < 0 or account_option > 3:
@@ -203,7 +197,7 @@ try:
                 account_option = show_account_menu()
         
         #If the user selection is less than 0 or greater than 4, display an invalid user selection
-        if user_selection < 1 or user_selection > 4:
+        if user_selection < 0 or user_selection > 4:
             print("\nInvalid option, please retry...")
             
         #Show the main menu
